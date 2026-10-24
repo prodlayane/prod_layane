@@ -212,4 +212,13 @@ button:focus-visible,a:focus-visible{outline-color:#b7c2db}
 @media(max-height:600px){
   .lock-clock{top:9%}.lock-clock>time{font-size:70px;letter-spacing:-4px}.lock-clock>p{font-size:12px;margin-bottom:5px}.login-user{top:auto;bottom:10%}.login-avatar{height:54px;width:54px}.login-user>h1{font-size:14px;margin-top:9px}.login-button{margin-top:8px;min-height:28px;min-width:28px;width:28px;height:28px}.login-arrow{width:26px;height:26px}.login-status{font-size:8px;margin-top:8px}.lock-footer{bottom:11px}.lock-footer button{padding:6px 8px;font-size:8px}
 }
-@media(prefers-reduced-motion:reduce){.login-avatar,.project-art{transition:none!important}}
+/* Free placement is limited to computer-sized viewports with a precise pointer. */
+@media(min-width:801px) and (pointer:fine){
+  .desktop-folders{inset:0;left:0;right:0;top:0;bottom:0;transform:none;width:auto;display:block;pointer-events:none;z-index:2}
+  .desktop-folders .desktop-item{position:absolute;width:110px;height:96px;min-height:96px;pointer-events:auto;touch-action:none;cursor:grab;transition:background .15s,border-color .15s}
+  .desktop-folders .note-file{margin-top:0}
+  .desktop-item.is-folder-dragging{cursor:grabbing;z-index:4;transition:none;background:#ffffff10;border-color:#ffffff30}
+  .desktop-item.is-folder-dragging .folder-icon{transform:scale(1.07);filter:grayscale(1) brightness(1.2) drop-shadow(0 9px 12px #000b)}
+  .desktop-item.is-folder-dragging .paper-icon{transform:rotate(0) scale(1.05)}
+}
+@media(prefers-reduced-motion:reduce){.login-avatar,.project-art,.desktop-folders .desktop-item{transition:none!important}}

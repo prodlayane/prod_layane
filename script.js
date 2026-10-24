@@ -1,27 +1,27 @@
 /* СВОИ ДАННЫЕ — измените этот блок. Сайт работает без сборки и интернета. */
 const PORTFOLIO = {
   name: 'prod_layane',
-  greeting: 'За кадром — prod_layane.',
-  role: 'Дизайн. Фотография. Движение.',
-  bio: 'Личный архив визуальных экспериментов. Исследую формы, собираю кадры и ищу свой язык — где-то между цифровой культурой, музыкой и повседневностью.',
+  greeting: 'prod_layane — визуальная практика.',
+  role: 'Графический дизайн, изображение и короткая форма.',
+  bio: 'Мне близки независимая музыкальная сцена, цифровой андеграунд и журнальная графика. В работах ищу точное соотношение характера и структуры: чтобы образ цеплял сразу, а детали раскрывались при втором взгляде.',
   email: '', // Например: 'name@example.com'. Пустое поле не создаёт фиктивный контакт.
   phone: '+79293734072',
   phoneDisplay: '8 (929) 373-40-72',
   telegram: 'https://t.me/prod_layane',
   behance: '', // Полная ссылка на ваше портфолио
   available: true,
-  skills: ['Визуальный дизайн', 'Фотография', 'Арт-дирекшн', 'Монтаж', 'Figma', 'Любопытство'],
+  skills: ['Визуальные системы', 'Обложки и постеры', 'Типографика', 'Арт-дирекшн', 'Монтаж', 'Motion'],
 };
 
 const PROJECTS = [
-  { id: 'form', title: 'FORM® Studio', category: 'design', folder: 'identity', type: 'Айдентика', year: '2026', image: 'assets/form.svg?v=chrome-2', summary: 'Форма. Характер. Новая перспектива.', description: 'Концепт айдентики для независимой дизайн-студии. Контрастная типографика, скульптурный хром и глубокий чёрный складываются в узнаваемый визуальный язык.', meta: 'Айдентика · Арт-дирекшн', demo: true },
-  { id: 'quiet', title: 'Там, где тише', category: 'photos', folder: 'nature', type: 'Визуальные истории', year: '2026', image: 'assets/landscape.svg', summary: 'Места, в которых хочется остаться.', description: 'Иллюстрированный этюд о путешествиях, тишине и умении замечать. Эта работа — пример оформления серии. Здесь можно разместить свои фотографии и историю о том, как они появились.', meta: 'Пейзажи · Визуальный дневник', demo: true },
-  { id: 'slow', title: 'NO SIGNAL', category: 'design', folder: 'posters', type: 'Графический дизайн', year: '2026', image: 'assets/signal.svg', summary: 'Графика на своей частоте.', description: 'Концепт постера для независимой музыкальной сцены. Контрастная типографика, сигнальный красный и хромовый символ — графика, которая работает на своей частоте.', meta: 'Постер · Типографика', demo: true },
-  { id: 'arches', title: 'Геометрия света', category: 'photos', folder: 'city', type: 'Архитектура', year: '2026', image: 'assets/architecture.svg', summary: 'Ритм арок и тёплые тени.', description: 'Иллюстрированный архитектурный этюд. Повторяющиеся арки создают глубину, а солнечный свет превращает привычную геометрию в маленькое открытие. Пример карточки для вашей архитектурной фотографии.', meta: 'Город · Архитектура', demo: true },
-  { id: 'blue-hour', title: 'После заката', category: 'photos', folder: 'nature', type: 'Визуальные истории', year: '2026', image: 'assets/night.svg', summary: 'Между последним светом и первой звездой.', description: 'Иллюстрированный вечерний пейзаж. Приглушённая палитра, далёкие горы и тонкий серп луны. Замените этот этюд своей фотографией — оформление уже готово.', meta: 'Пейзажи · Вечерний свет', demo: true },
-  { id: 'form-digital', title: 'FORM / Digital', category: 'design', folder: 'digital', type: 'Веб-дизайн', year: '2026', image: 'assets/offgrid.svg', summary: 'Цифровое продолжение характера.', description: 'Концепт цифрового пространства FORM. Крупная типографика, тактильные формы и продуманная сетка помогают рассказать о студии без лишнего шума.', meta: 'Веб-дизайн · Концепт', demo: true },
-  { id: 'still-film', title: 'Тишина внутри', category: 'videos', folder: 'motion', type: 'Живой этюд', year: '2026', image: 'assets/landscape.svg', summary: 'Маленькая пауза в большом дне.', description: 'Демонстрационный motion-этюд: медленное движение по иллюстрации с титрами. Управление воспроизведением работает. Пауза, в которой хочется остаться.', meta: 'Motion study · 15 секунд', duration: 15, caption: 'somewhere, slower.', demo: true },
-  { id: 'night-film', title: 'Когда город уснул', category: 'videos', folder: 'motion', type: 'Живой этюд', year: '2026', image: 'assets/night.svg', summary: 'Время, которое принадлежит только тебе.', description: 'Демонстрационный motion-этюд о синем часе. Спокойное приближение, вечерняя палитра и одна короткая фраза. Небольшая история без лишних слов.', meta: 'Motion study · 15 секунд', duration: 15, caption: 'a little closer to yourself.', demo: true },
+  { id: 'form', title: 'FORM® Studio', category: 'design', folder: 'identity', type: 'Айдентика', year: '2026', image: 'assets/form.svg?v=chrome-2', summary: 'Контрастная типографика и пластичный хром.', description: 'Независимый концепт айдентики для дизайн-студии. В основе — контраст строгой типографики и подвижной хромовой формы. Модульная композиция позволяет сохранять характер системы в постере, обложке и цифровом носителе.', meta: 'Айдентика · Арт-дирекшн', demo: true },
+  { id: 'quiet', title: 'Там, где тише', category: 'photos', folder: 'nature', type: 'Визуальные истории', year: '2026', image: 'assets/landscape.svg', summary: 'Ландшафт как работа с масштабом и паузой.', description: 'Иллюстрированный ландшафтный этюд. Здесь важны три плана, смещённая точка внимания и спокойная цветовая дистанция. Работа исследует, как масштаб и свободное пространство создают ощущение тишины без буквального сюжета.', meta: 'Пейзажи · Визуальный дневник', demo: true },
+  { id: 'slow', title: 'NO SIGNAL', category: 'design', folder: 'posters', type: 'Графический дизайн', year: '2026', image: 'assets/signal.svg', summary: 'Сигнальный красный и типографический напор.', description: 'Независимый концепт постера для музыкальной сцены. Крупная типографика задаёт напор, красный работает как сигнал, а хромовый знак нарушает плоскость. Задача этюда — передать энергию события до того, как зритель прочитает детали.', meta: 'Постер · Типографика', demo: true },
+  { id: 'arches', title: 'Геометрия света', category: 'photos', folder: 'city', type: 'Архитектура', year: '2026', image: 'assets/architecture.svg', summary: 'Повтор, глубина и жёсткий дневной свет.', description: 'Иллюстрированное исследование архитектурного ритма. Повтор арок собирает перспективу, а жёсткий свет разделяет пространство на плоскости. В центре внимания — пропорция, глубина и то, как меняется восприятие пространства.', meta: 'Город · Архитектура', demo: true },
+  { id: 'blue-hour', title: 'После заката', category: 'photos', folder: 'nature', type: 'Визуальные истории', year: '2026', image: 'assets/night.svg', summary: 'Сдержанная палитра на границе дня и ночи.', description: 'Вечерний пейзажный этюд с ограниченной палитрой. Несколько тональных слоёв, небольшой источник света и почти пустое небо. Здесь проверяю, сколько информации можно убрать из изображения, сохранив его атмосферу.', meta: 'Пейзажи · Вечерний свет', demo: true },
+  { id: 'form-digital', title: 'FORM / Digital', category: 'design', folder: 'digital', type: 'Веб-дизайн', year: '2026', image: 'assets/offgrid.svg', summary: 'Экранная система для независимой студии.', description: 'Концепт цифрового продолжения FORM. Терминальная эстетика и контрастная сетка становятся основой для типографической иерархии. Фокус — на переходе от выразительного первого экрана к понятной системе навигации.', meta: 'Веб-дизайн · Концепт', demo: true },
+  { id: 'still-film', title: 'Тишина внутри', category: 'videos', folder: 'motion', type: 'Живой этюд', year: '2026', image: 'assets/landscape.svg', summary: 'Медленное приближение и один точный титр.', description: 'Пятнадцатисекундный motion-этюд на основе иллюстрации. Медленное приближение меняет масштаб кадра, а короткий титр задаёт интонацию. Темп, дистанция и длительность взгляда задают ощущение от этой короткой сцены.', meta: 'Motion study · 15 секунд', duration: 15, caption: 'somewhere, slower.', demo: true },
+  { id: 'night-film', title: 'Когда город уснул', category: 'videos', folder: 'motion', type: 'Живой этюд', year: '2026', image: 'assets/night.svg', summary: 'Ночной кадр, собранный вокруг ощущения времени.', description: 'Короткий motion-этюд о переходном свете. Приглушённая палитра и плавное движение работают как единый ритм. Титр остаётся частью композиции и не перетягивает на себя изображение.', meta: 'Motion study · 15 секунд', duration: 15, caption: 'a little closer to yourself.', demo: true },
 ];
 
 (() => {
@@ -34,13 +34,13 @@ const PROJECTS = [
   const win = $('#finder-window');
   const content = $('#window-content');
   const sections = {
-    home: { title: 'Портфолио', subtitle: 'Все работы в одном месте', icon: 'grid' },
-    about: { title: 'Обо мне', subtitle: 'Человек за этим рабочим столом', icon: 'user' },
-    photos: { title: 'Фото', subtitle: 'Мой взгляд на мир', icon: 'photo' },
-    videos: { title: 'Видео', subtitle: 'Истории в движении', icon: 'video' },
-    design: { title: 'Дизайн', subtitle: 'Идеи, у которых появилась форма', icon: 'design' },
-    contact: { title: 'Контакты', subtitle: 'Давай создадим что-нибудь вместе', icon: 'mail' },
-    note: { title: 'прочитай меня.txt', subtitle: 'Маленькая записка для тебя', icon: 'mail' },
+    home: { title: 'Портфолио', subtitle: 'Избранные концепты и визуальные исследования', icon: 'grid' },
+    about: { title: 'Обо мне', subtitle: 'Подход, интересы и направления работы', icon: 'user' },
+    photos: { title: 'Фото', subtitle: 'Свет, пространство и визуальные наблюдения', icon: 'photo' },
+    videos: { title: 'Видео', subtitle: 'Короткая форма, монтаж и атмосфера', icon: 'video' },
+    design: { title: 'Дизайн', subtitle: 'Айдентика, постеры и цифровая графика', icon: 'design' },
+    contact: { title: 'Контакты', subtitle: 'Обсудить задачу, формат и сроки', icon: 'mail' },
+    note: { title: 'прочитай меня.txt', subtitle: 'О том, как устроен этот архив', icon: 'mail' },
     trash: { title: 'Корзина', subtitle: 'Ничего лишнего', icon: 'grid' },
   };
   let currentPage = 'home';
@@ -135,17 +135,17 @@ const PROJECTS = [
       <div class="project-card-title">${escapeHTML(project.title)}<span>${String(PROJECTS.indexOf(project)+1).padStart(2,'0')} / ${project.year.slice(-2)}</span></div><p class="project-card-description">${escapeHTML(project.summary)}</p></button>`;
   }
   function homePage() {
-    return `<div class="page-intro"><div class="eyebrow"><span class="tiny-star"><svg aria-hidden="true"><use href="#i-spark"/></svg></span> ${escapeHTML(PORTFOLIO.name)} / INDEX</div>${PORTFOLIO.available ? '<span class="availability"><i></i> Доступен для проектов</span>' : ''}</div>
-      <div class="hero"><h1>Свой взгляд.<br><em>Свои правила.</em></h1><p class="hero-description">Визуальные системы, кадры и движение.<br><b>Личный архив. Без лишнего шума.</b></p><span class="hero-flower" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span></div>
+    return `<div class="page-intro"><div class="eyebrow"><span class="tiny-star"><svg aria-hidden="true"><use href="#i-spark"/></svg></span> ${escapeHTML(PORTFOLIO.name)} / INDEX</div>${PORTFOLIO.available ? '<span class="availability"><i></i> Открыт к коллаборациям</span>' : ''}</div>
+      <div class="hero"><h1>Графика.<br><em>Кадр. Ритм.</em></h1><p class="hero-description">Визуальная практика на пересечении музыкальной культуры,<br><b>цифровой среды и редакционного дизайна.</b></p><span class="hero-flower" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span></div>
       <div class="section-heading"><h2>Избранное</h2><span>SELECTED / 01—03</span></div>
       <div class="project-grid">${PROJECTS.slice(0,3).map(card).join('')}</div>
-      <div class="home-divider"></div><div class="home-bottom"><div class="home-note"><span class="note-star" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><p>Есть идея? Давай сделаем громче.<br><small>Коллаборации. Новые форматы. Нестандартные задачи.</small></p></div><button class="contact-button" data-open="contact">Связаться ${icon('arrow')}</button></div>
-      <p class="demo-footnote">Демонстрационные концепты и визуальные эксперименты / 2026</p>`;
+      <div class="home-divider"></div><div class="home-bottom"><div class="home-note"><span class="note-star" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><p>Сначала — идея и контекст.<br><small>Потом — система, которая держит характер во всех форматах.</small></p></div><button class="contact-button" data-open="contact">Обсудить проект ${icon('arrow')}</button></div>
+      <p class="demo-footnote">Независимые концепты и визуальные исследования / 2026</p>`;
   }
   const categories = {
-    photos: { label: 'PHOTOGRAPHY', heading: 'Смотреть иначе.', description: 'Свет, ритм, случайные совпадения. Иллюстрированные этюды для будущего фотоархива.', filters: [['all','Всё'],['nature','Природа'],['city','Город']] },
-    design: { label: 'ART & DESIGN', heading: 'Форма имеет голос.', description: 'Графика, айдентика и цифровые эксперименты. Демонстрационные концепты — от первой идеи до визуальной системы.', filters: [['all','Всё'],['identity','Айдентика'],['posters','Постеры'],['digital','Веб-дизайн']] },
-    videos: { label: 'MOTION PICTURE', heading: 'Выйти из кадра.', description: 'Время как материал. Два живых motion-этюда: движение, атмосфера и ощущение присутствия.', filters: [['all','Всё'],['motion','Motion-этюды']] },
+    photos: { label: 'PHOTOGRAPHY', heading: 'Наблюдать внимательнее.', description: 'Городская геометрия, пустые пространства и меняющийся свет. Пока здесь — иллюстрированные наблюдения; со временем они станут отправной точкой для фотографических серий.', filters: [['all','Всё'],['nature','Природа'],['city','Город']] },
+    design: { label: 'ART & DESIGN', heading: 'Графика с позицией.', description: 'Обложки, постеры и айдентика для культурных проектов. Исследую, как типографика, материал и контраст складываются в язык, который узнаётся без подписи.', filters: [['all','Всё'],['identity','Айдентика'],['posters','Постеры'],['digital','Веб-дизайн']] },
+    videos: { label: 'MOTION PICTURE', heading: 'Движение задаёт тон.', description: 'Короткие формы о темпе и атмосфере. Плавное движение, выверенная пауза и титр, который работает вместе с кадром, — здесь даже небольшая деталь меняет ощущение от истории.', filters: [['all','Всё'],['motion','Motion-этюды']] },
   };
   function categoryPage(page) {
     const c = categories[page];
@@ -156,9 +156,9 @@ const PROJECTS = [
       <div class="gallery-grid">${projects.map(card).join('')}</div>`;
   }
   function aboutPage() {
-    return `<div class="eyebrow">Портфолио / Обо мне</div><div class="about-layout"><div class="about-portrait"><span aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><small>ALWAYS A WORK IN PROGRESS</small></div><div class="about-text"><h2>${escapeHTML(PORTFOLIO.greeting)}</h2><p>${escapeHTML(PORTFOLIO.role)}</p><p>${escapeHTML(PORTFOLIO.bio)}</p><div class="skill-tags">${PORTFOLIO.skills.map(s => `<span>${escapeHTML(s)}</span>`).join('')}</div></div></div>
-      <div class="about-facts"><div><strong>С вниманием</strong><span>к маленьким деталям</span></div><div><strong>С любопытством</strong><span>к большим идеям</span></div><div><strong>С удовольствием</strong><span>к совместной работе</span></div></div>
-      <div class="home-divider"></div><div class="home-bottom"><div class="home-note"><span class="note-star"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><p>Хорошие вещи начинаются<br><small>с простого «привет».</small></p></div><button class="contact-button" data-open="contact">Давай поговорим ${icon('arrow')}</button></div>`;
+    return `<div class="eyebrow">Портфолио / Обо мне</div><div class="about-layout"><div class="about-portrait"><span aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><small>INDEPENDENT VISUAL PRACTICE</small></div><div class="about-text"><h2>${escapeHTML(PORTFOLIO.greeting)}</h2><p>${escapeHTML(PORTFOLIO.role)}</p><p>${escapeHTML(PORTFOLIO.bio)}</p><div class="skill-tags">${PORTFOLIO.skills.map(s => `<span>${escapeHTML(s)}</span>`).join('')}</div></div></div>
+      <div class="about-facts"><div><strong>Контекст</strong><span>От задачи и среды — к визуальной идее.</span></div><div><strong>Система</strong><span>От ключевого образа — к серии носителей.</span></div><div><strong>Характер</strong><span>Деталь, по которой работу можно узнать.</span></div></div>
+      <div class="home-divider"></div><div class="home-bottom"><div class="home-note"><span class="note-star"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><p>Ближе всего — культурные и независимые проекты.<br><small>Музыка, события, издательские и цифровые форматы.</small></p></div><button class="contact-button" data-open="contact">Обсудить задачу ${icon('arrow')}</button></div>`;
   }
   function safeLink(value) {
     try { const url = new URL(value); return url.protocol === 'https:' ? escapeHTML(url.href) : ''; } catch { return ''; }
@@ -167,14 +167,14 @@ const PROJECTS = [
     const mail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(PORTFOLIO.email) ? PORTFOLIO.email : '';
     const phone = /^\+?[\d\s()-]{7,20}$/.test(PORTFOLIO.phone || '') ? PORTFOLIO.phone.replace(/[^\d+]/g,'') : '';
     const links = [['Telegram',PORTFOLIO.telegram],['Behance',PORTFOLIO.behance]].filter(([,url]) => safeLink(url));
-    return `<div class="eyebrow">DIRECT CONTACT / PROD_LAYANE</div><div class="contact-hero"><span class="big-flower" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><h1>Давай сделаем<br><em>что-то своё.</em></h1><p>Проекты, коллаборации и идеи, которые не дают уснуть.<br>Пиши. Обсудим.</p>
+    return `<div class="eyebrow">DIRECT CONTACT / PROD_LAYANE</div><div class="contact-hero"><span class="big-flower" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><h1>Есть задача?<br><em>Начнём с неё.</em></h1><p>Пришли контекст проекта, нужные форматы и сроки.<br>Если есть референсы — приложи их. Обсудим направление и объём работы.</p>
       ${phone ? `<div class="contact-email"><a href="tel:${escapeHTML(phone)}">${escapeHTML(PORTFOLIO.phoneDisplay || phone)}</a><button class="copy-button" id="copy-phone">Скопировать ${icon('arrow')}</button></div>` : ''}
       ${mail ? `<div class="contact-email"><a href="mailto:${escapeHTML(mail)}">${escapeHTML(mail)}</a><button class="copy-button" id="copy-email">Скопировать ${icon('arrow')}</button></div>` : ''}
       ${links.length ? `<div class="contact-links">${links.map(([label,url]) => `<a href="${safeLink(url)}" target="_blank" rel="noopener noreferrer">${label}${icon('arrow')}</a>`).join('')}</div>` : ''}
       ${!mail && !phone && !links.length ? '<p class="contact-placeholder">Это твоё портфолио. Добавь контакты в начале script.js — они появятся здесь автоматически.</p>' : ''}</div>`;
   }
   function notePage() {
-    return `<div class="eyebrow">Личная заметка · прочитай меня.txt</div><h1>О, привет. Ты здесь :)</h1><p>Этот сайт — мой маленький цифровой дом. Тут можно заглянуть в папки, рассмотреть работы и немного узнать меня.</p><p>Мне нравится мысль, что портфолио может быть не просто списком проектов. Оно может быть пространством, в котором хочется задержаться.</p><p>Так что располагайся. Открывай всё, что хочется. Даже корзину — там всё безопасно.</p><p>Спасибо, что заглянул.</p><div class="note-sign">с теплом, ${escapeHTML(PORTFOLIO.name)} ✳︎</div>`;
+    return `<div class="eyebrow">Заметка к архиву · прочитай меня.txt</div><h1>Что остаётся за кадром.</h1><p>Меня цепляют вещи с собственным голосом: обложка из маленького музыкального лейбла, случайный кадр на пустой улице, шрифт с неидеальным ритмом. Такие находки часто оказываются началом работы.</p><p>Этот архив — способ держать их рядом и проверять идеи на практике. Сейчас в папках — независимые концепты и визуальные этюды. Здесь можно проследить ход идеи, композиционные решения и поиск своего языка.</p><p>В дизайне мне интересен переход от одного сильного образа к системе: как он живёт на постере, в движении и на экране. В изображении — точка, где свет и композиция уже рассказывают историю.</p><p>Если у твоего проекта похожая оптика — пиши. Интереснее всего находить общий язык ещё до первого макета.</p><div class="note-sign">${escapeHTML(PORTFOLIO.name)} / заметки к визуальной практике</div>`;
   }
   function plural(n, words) { return n % 10 === 1 && n % 100 !== 11 ? words[0] : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? words[1] : words[2]; }
   function renderPage() {
