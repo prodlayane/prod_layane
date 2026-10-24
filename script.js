@@ -50,7 +50,50 @@ const PROJECTS = [
   let toastTimeout, minimizeTimeout, previousFocus, activeOverlay, audioContext;
   let filmFrame = null;
   let soundOn = false;
+  let sessionLocked = true;
+  let sessionTransition = null;
+  let firstLogin = true;
+  let pendingPage = null;
   try { soundOn = localStorage.getItem('portfolio-sound') === 'true'; if (localStorage.getItem('portfolio-wallpaper') === 'cool') $('.wallpaper').classList.add('cool'); } catch {}
+
+  function unlockSession() {
+    if (!sessionLocked || sessionTransition !== null) return;
+    $('#login-button').disabled = true;
+    $('#login-button-label').textContent = 'Входим…';
+    $('#login-status').textContent = 'Открываю рабочий стол';
+    document.body.classList.add('is-unlocking');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    sessionTransition = setTimeout(() => {
+      sessionTransition = null;
+      sessionLocked = false;
+      $('#lock-screen').hidden = true;
+      document.body.classList.remove('is-locked', 'is-unlocking');
+      document.body.classList.add('session-entered');
+      $$('.desktop, .dock, .menu-bar').forEach(el => el.inert = false);
+      if (firstLogin || pendingPage) {
+        const requestedPage = pendingPage || location.hash.slice(1);
+        if (sections[requestedPage] && (requestedPage !== 'home' || pendingPage)) openWindow(requestedPage, false);
+        pendingPage = null;
+        firstLogin = false;
+      }
+      $('.desktop').focus({preventScroll:true});
+    }, reducedMotion ? 0 : 650);
+  }
+  function lockSession() {
+    if (sessionLocked) return;
+    hideOverlay(false); closeMenus();
+    clearTimeout(toastTimeout); $('#toast').classList.remove('visible');
+    sessionLocked = true;
+    document.body.classList.remove('session-entered');
+    document.body.classList.add('is-locked');
+    $('#lock-screen').hidden = false;
+    $('#login-button').disabled = false;
+    $('#login-button-label').textContent = 'Войти в сессию';
+    $('#login-status').textContent = 'Нажми Enter или кнопку, чтобы войти';
+    $$('.desktop, .dock, .menu-bar').forEach(el => el.inert = true);
+    updateClock();
+    $('#login-button').focus({preventScroll:true});
+  }
 
   function notify(message) {
     clearTimeout(toastTimeout);
@@ -151,6 +194,7 @@ const PROJECTS = [
     document.title = `${sections[currentPage].title} — ${PORTFOLIO.name}`;
   }
   function openWindow(page = currentPage, push = true) {
+    if (sessionLocked) return;
     if (!sections[page]) page = 'home';
     clearTimeout(minimizeTimeout);
     win.classList.remove('is-closed','is-minimizing');
@@ -277,6 +321,10 @@ const PROJECTS = [
     if (!target.closest('.dropdown, .control-panel') && !['file-menu-button','view-menu-button','control-button'].includes(target.id)) closeMenus();
   });
   $('#window-close').addEventListener('click', () => closeWindow());
+  $('#login-button').addEventListener('click', unlockSession);
+  $('#lock-session').addEventListener('click', lockSession);
+  $('#lock-control').addEventListener('click', lockSession);
+  $('#lock-wallpaper').addEventListener('click', toggleWallpaper);
   $('#window-minimize').addEventListener('click', () => closeWindow(true));
   $('#window-maximize').addEventListener('click', () => { win.classList.toggle('is-maximized'); $('#window-maximize').setAttribute('aria-label', win.classList.contains('is-maximized') ? 'Восстановить размер' : 'Развернуть окно'); });
   $('#go-back').addEventListener('click', () => { if (navigationIndex > 0) openWindow(navigation[--navigationIndex],false); });
@@ -307,6 +355,17 @@ const PROJECTS = [
     }
   });
   document.addEventListener('keydown', event => {
+    if (sessionLocked) {
+      if (event.key === 'Enter' && !event.target.closest('#lock-wallpaper')) {
+        event.preventDefault(); unlockSession();
+      }
+      if (event.key === 'Tab') {
+        const first = $('#login-button'), last = $('#lock-wallpaper');
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+      return;
+    }
     if (event.key === 'Escape') {
       if (activeOverlay) hideOverlay();
       else if ($$('.dropdown, .control-panel').some(el => !el.classList.contains('hidden'))) closeMenus();
@@ -342,7 +401,12 @@ const PROJECTS = [
   dragHandle.addEventListener('pointerup', stopDrag); dragHandle.addEventListener('pointercancel',stopDrag);
   dragHandle.addEventListener('dblclick', event => { if (!event.target.closest('button')) $('#window-maximize').click(); });
   window.addEventListener('resize', () => { win.style.left=''; win.style.top=''; });
-  window.addEventListener('hashchange', () => { const page = location.hash.slice(1); if (sections[page] && page !== currentPage) openWindow(page); });
+  window.addEventListener('hashchange', () => {
+    const page = location.hash.slice(1);
+    if (!sections[page]) return;
+    if (sessionLocked) { pendingPage = page; return; }
+    if (page !== currentPage) openWindow(page);
+  });
 
   function updateClock() {
     const now = new Date();
@@ -350,6 +414,10 @@ const PROJECTS = [
     const time = now.toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'});
     $('#clock').textContent = `${date.charAt(0).toUpperCase()+date.slice(1)}  ${time}`;
     $('#clock').dateTime = now.toISOString();
+    $('#lock-time').textContent = time;
+    $('#lock-time').dateTime = now.toISOString();
+    const lockDate = now.toLocaleDateString('ru-RU', {weekday:'long', day:'numeric', month:'long'});
+    $('#lock-date').textContent = lockDate.charAt(0).toUpperCase() + lockDate.slice(1);
   }
   updateClock(); setInterval(updateClock,15000); updateSound();
   $$('[data-open]').forEach(button => {
@@ -358,4 +426,6 @@ const PROJECTS = [
   const initialPage = location.hash.slice(1);
   if (sections[initialPage]) { currentPage = initialPage; navigation = [initialPage]; }
   renderPage();
+  $('#login-name').textContent = PORTFOLIO.name;
+  $('#login-button').focus({preventScroll:true});
 })();
