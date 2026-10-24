@@ -1,9 +1,9 @@
 /* СВОИ ДАННЫЕ — измените этот блок. Сайт работает без сборки и интернета. */
 const PORTFOLIO = {
   name: 'prod_layane',
-  greeting: 'Привет! Я — человек за этим рабочим столом.',
-  role: 'Дизайнер, визуальный рассказчик и немного исследователь.',
-  bio: 'Люблю находить необычное в повседневном. Собираю впечатления, превращаю идеи в визуальные истории и верю, что хороший дизайн начинается с любопытства.',
+  greeting: 'За кадром — prod_layane.',
+  role: 'Дизайн. Фотография. Движение.',
+  bio: 'Личный архив визуальных экспериментов. Исследую формы, собираю кадры и ищу свой язык — где-то между цифровой культурой, музыкой и повседневностью.',
   email: '', // Например: 'name@example.com'. Пустое поле не создаёт фиктивный контакт.
   phone: '+79293734072',
   phoneDisplay: '8 (929) 373-40-72',
@@ -14,14 +14,14 @@ const PORTFOLIO = {
 };
 
 const PROJECTS = [
-  { id: 'form', title: 'FORM® Studio', category: 'design', folder: 'identity', type: 'Айдентика', year: '2026', image: 'assets/form.svg', summary: 'Форма. Характер. Новая перспектива.', description: 'Концепт айдентики для независимой дизайн-студии. Мягкая типографика, скульптурная форма и спокойный лавандовый цвет складываются в узнаваемый визуальный язык.', meta: 'Айдентика · Арт-дирекшн', demo: true },
+  { id: 'form', title: 'FORM® Studio', category: 'design', folder: 'identity', type: 'Айдентика', year: '2026', image: 'assets/form.svg?v=chrome-2', summary: 'Форма. Характер. Новая перспектива.', description: 'Концепт айдентики для независимой дизайн-студии. Контрастная типографика, скульптурный хром и глубокий чёрный складываются в узнаваемый визуальный язык.', meta: 'Айдентика · Арт-дирекшн', demo: true },
   { id: 'quiet', title: 'Там, где тише', category: 'photos', folder: 'nature', type: 'Визуальные истории', year: '2026', image: 'assets/landscape.svg', summary: 'Места, в которых хочется остаться.', description: 'Иллюстрированный этюд о путешествиях, тишине и умении замечать. Эта работа — пример оформления серии. Здесь можно разместить свои фотографии и историю о том, как они появились.', meta: 'Пейзажи · Визуальный дневник', demo: true },
-  { id: 'slow', title: 'Slow Days', category: 'design', folder: 'posters', type: 'Графический дизайн', year: '2026', image: 'assets/orange.svg', summary: 'Меньше шума. Больше настоящего.', description: 'Концептуальная серия постеров о простых удовольствиях. Тёплый оранжевый, большой цветок и немного свободного пространства — напоминание, что иногда можно просто замедлиться.', meta: 'Постер · Типографика', demo: true },
+  { id: 'slow', title: 'NO SIGNAL', category: 'design', folder: 'posters', type: 'Графический дизайн', year: '2026', image: 'assets/signal.svg', summary: 'Графика на своей частоте.', description: 'Концепт постера для независимой музыкальной сцены. Контрастная типографика, сигнальный красный и хромовый символ — графика, которая работает на своей частоте.', meta: 'Постер · Типографика', demo: true },
   { id: 'arches', title: 'Геометрия света', category: 'photos', folder: 'city', type: 'Архитектура', year: '2026', image: 'assets/architecture.svg', summary: 'Ритм арок и тёплые тени.', description: 'Иллюстрированный архитектурный этюд. Повторяющиеся арки создают глубину, а солнечный свет превращает привычную геометрию в маленькое открытие. Пример карточки для вашей архитектурной фотографии.', meta: 'Город · Архитектура', demo: true },
   { id: 'blue-hour', title: 'После заката', category: 'photos', folder: 'nature', type: 'Визуальные истории', year: '2026', image: 'assets/night.svg', summary: 'Между последним светом и первой звездой.', description: 'Иллюстрированный вечерний пейзаж. Приглушённая палитра, далёкие горы и тонкий серп луны. Замените этот этюд своей фотографией — оформление уже готово.', meta: 'Пейзажи · Вечерний свет', demo: true },
-  { id: 'form-digital', title: 'FORM / Digital', category: 'design', folder: 'digital', type: 'Веб-дизайн', year: '2026', image: 'assets/form.svg', summary: 'Цифровое продолжение характера.', description: 'Концепт цифрового пространства FORM. Крупная типографика, тактильные формы и продуманная сетка помогают рассказать о студии без лишнего шума.', meta: 'Веб-дизайн · Концепт', demo: true },
-  { id: 'still-film', title: 'Тишина внутри', category: 'videos', folder: 'motion', type: 'Живой этюд', year: '2026', image: 'assets/landscape.svg', summary: 'Маленькая пауза в большом дне.', description: 'Демонстрационный motion-этюд: медленное движение по иллюстрации с титрами. Управление воспроизведением работает. Чтобы добавить настоящее видео, укажите video: «assets/your-video.mp4» в этой работе.', meta: 'Motion study · 15 секунд', duration: 15, caption: 'somewhere, slower.', demo: true },
-  { id: 'night-film', title: 'Когда город уснул', category: 'videos', folder: 'motion', type: 'Живой этюд', year: '2026', image: 'assets/night.svg', summary: 'Время, которое принадлежит только тебе.', description: 'Демонстрационный motion-этюд о синем часе. Спокойное приближение, вечерняя палитра и одна короткая фраза. Карточка поддерживает и настоящий MP4 — добавьте поле video с путём к файлу.', meta: 'Motion study · 15 секунд', duration: 15, caption: 'a little closer to yourself.', demo: true },
+  { id: 'form-digital', title: 'FORM / Digital', category: 'design', folder: 'digital', type: 'Веб-дизайн', year: '2026', image: 'assets/offgrid.svg', summary: 'Цифровое продолжение характера.', description: 'Концепт цифрового пространства FORM. Крупная типографика, тактильные формы и продуманная сетка помогают рассказать о студии без лишнего шума.', meta: 'Веб-дизайн · Концепт', demo: true },
+  { id: 'still-film', title: 'Тишина внутри', category: 'videos', folder: 'motion', type: 'Живой этюд', year: '2026', image: 'assets/landscape.svg', summary: 'Маленькая пауза в большом дне.', description: 'Демонстрационный motion-этюд: медленное движение по иллюстрации с титрами. Управление воспроизведением работает. Пауза, в которой хочется остаться.', meta: 'Motion study · 15 секунд', duration: 15, caption: 'somewhere, slower.', demo: true },
+  { id: 'night-film', title: 'Когда город уснул', category: 'videos', folder: 'motion', type: 'Живой этюд', year: '2026', image: 'assets/night.svg', summary: 'Время, которое принадлежит только тебе.', description: 'Демонстрационный motion-этюд о синем часе. Спокойное приближение, вечерняя палитра и одна короткая фраза. Небольшая история без лишних слов.', meta: 'Motion study · 15 секунд', duration: 15, caption: 'a little closer to yourself.', demo: true },
 ];
 
 (() => {
@@ -88,8 +88,8 @@ const PROJECTS = [
     document.body.classList.add('is-locked');
     $('#lock-screen').hidden = false;
     $('#login-button').disabled = false;
-    $('#login-button-label').textContent = 'Войти в сессию';
-    $('#login-status').textContent = 'Нажми Enter или кнопку, чтобы войти';
+    $('#login-button-label').textContent = 'Войти';
+    $('#login-status').textContent = 'Нажмите для входа';
     $$('.desktop, .dock, .menu-bar').forEach(el => el.inert = true);
     updateClock();
     $('#login-button').focus({preventScroll:true});
@@ -132,27 +132,27 @@ const PROJECTS = [
   function card(project) {
     return `<button class="project-card ${project.category === 'videos' ? 'video-card' : ''}" data-project="${project.id}" aria-label="Открыть работу: ${escapeHTML(project.title)}">
       <div class="project-art"><img src="${escapeHTML(project.image)}" alt="${escapeHTML(project.title)}" loading="lazy" draggable="false"><span class="project-label">${escapeHTML(project.type)}</span>${project.category === 'videos' ? `<span class="video-play">▶</span><span class="video-duration">0:${String(project.duration).padStart(2,'0')}</span>` : `<span class="open-project-icon">${icon('arrow')}</span>`}</div>
-      <div class="project-card-title">${escapeHTML(project.title)}<span>${project.year}</span></div><p class="project-card-description">${escapeHTML(project.summary)}</p></button>`;
+      <div class="project-card-title">${escapeHTML(project.title)}<span>${String(PROJECTS.indexOf(project)+1).padStart(2,'0')} / ${project.year.slice(-2)}</span></div><p class="project-card-description">${escapeHTML(project.summary)}</p></button>`;
   }
   function homePage() {
-    return `<div class="page-intro"><div class="eyebrow"><span class="tiny-star"><svg aria-hidden="true"><use href="#i-spark"/></svg></span> ${escapeHTML(PORTFOLIO.name)} / 2026</div>${PORTFOLIO.available ? '<span class="availability"><i></i> Открыт к предложениям</span>' : ''}</div>
-      <div class="hero"><h1>Делаю цифровое<br>чуть <em>человечнее.</em></h1><p class="hero-description">Дизайн, фотографии и истории в движении.<br>Всё, что я люблю делать, — <b>в нескольких папках.</b></p><span class="hero-flower" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span></div>
-      <div class="section-heading"><h2>Избранное, с любовью</h2><span>2025 — 2026</span></div>
+    return `<div class="page-intro"><div class="eyebrow"><span class="tiny-star"><svg aria-hidden="true"><use href="#i-spark"/></svg></span> ${escapeHTML(PORTFOLIO.name)} / INDEX</div>${PORTFOLIO.available ? '<span class="availability"><i></i> Доступен для проектов</span>' : ''}</div>
+      <div class="hero"><h1>Свой взгляд.<br><em>Свои правила.</em></h1><p class="hero-description">Визуальные системы, кадры и движение.<br><b>Личный архив. Без лишнего шума.</b></p><span class="hero-flower" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span></div>
+      <div class="section-heading"><h2>Избранное</h2><span>SELECTED / 01—03</span></div>
       <div class="project-grid">${PROJECTS.slice(0,3).map(card).join('')}</div>
-      <div class="home-divider"></div><div class="home-bottom"><div class="home-note"><span class="note-star" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><p>За каждым проектом — человек.<br><small>За этим рабочим столом тоже. Давай знакомиться.</small></p></div><button class="contact-button" data-open="about">Немного обо мне ${icon('arrow')}</button></div>
-      <p class="demo-footnote">Сейчас здесь примеры работ. Скоро — твои собственные истории.</p>`;
+      <div class="home-divider"></div><div class="home-bottom"><div class="home-note"><span class="note-star" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><p>Есть идея? Давай сделаем громче.<br><small>Коллаборации. Новые форматы. Нестандартные задачи.</small></p></div><button class="contact-button" data-open="contact">Связаться ${icon('arrow')}</button></div>
+      <p class="demo-footnote">Демонстрационные концепты и визуальные эксперименты / 2026</p>`;
   }
   const categories = {
-    photos: { heading: 'Замечать. Сохранять.', description: 'Свет, места и маленькие моменты, которые хочется забрать с собой. Пока здесь иллюстрированные этюды — место для твоих фотографий.', filters: [['all','Всё'],['nature','Природа'],['city','Город']] },
-    design: { heading: 'Идеям нужна форма.', description: 'Визуальные системы, цифровые пространства и немного смелых экспериментов. Коллекция демонстрационных концептов.', filters: [['all','Всё'],['identity','Айдентика'],['posters','Постеры'],['digital','Веб-дизайн']] },
-    videos: { heading: 'Почувствовать движение.', description: 'Истории, которые не помещаются в один кадр. Открой живой этюд — или добавь сюда собственные видео.', filters: [['all','Всё'],['motion','Motion-этюды']] },
+    photos: { label: 'PHOTOGRAPHY', heading: 'Смотреть иначе.', description: 'Свет, ритм, случайные совпадения. Иллюстрированные этюды для будущего фотоархива.', filters: [['all','Всё'],['nature','Природа'],['city','Город']] },
+    design: { label: 'ART & DESIGN', heading: 'Форма имеет голос.', description: 'Графика, айдентика и цифровые эксперименты. Демонстрационные концепты — от первой идеи до визуальной системы.', filters: [['all','Всё'],['identity','Айдентика'],['posters','Постеры'],['digital','Веб-дизайн']] },
+    videos: { label: 'MOTION PICTURE', heading: 'Выйти из кадра.', description: 'Время как материал. Два живых motion-этюда: движение, атмосфера и ощущение присутствия.', filters: [['all','Всё'],['motion','Motion-этюды']] },
   };
   function categoryPage(page) {
     const c = categories[page];
     const projects = PROJECTS.filter(p => p.category === page && (currentFilter === 'all' || p.folder === currentFilter));
-    return `<div class="page-header"><div class="eyebrow">Портфолио / ${sections[page].title}</div><h1>${c.heading}</h1><p>${c.description}</p></div>
+    return `<div class="page-header"><div class="eyebrow"><span class="archive-led"></span> VISUAL ARCHIVE / ${c.label}<span class="archive-year">2026</span></div><h1>${c.heading}</h1><p>${c.description}</p></div>
       <nav class="subfolder-row" aria-label="Подпапки">${c.filters.map(([key,label]) => `<button class="subfolder ${currentFilter === key ? 'active' : ''}" data-filter="${key}" aria-pressed="${currentFilter === key}">${folderIcon}${label}</button>`).join('')}</nav>
-      <div class="section-heading"><h2>${c.filters.find(f => f[0] === currentFilter)?.[1] || 'Работы'}</h2><span>${projects.length} ${plural(projects.length, ['работа','работы','работ'])}</span></div>
+      <div class="section-heading"><h2>${currentFilter === 'all' ? 'Все объекты' : c.filters.find(f => f[0] === currentFilter)?.[1] || 'Работы'}</h2><span>${String(projects.length).padStart(2,'0')} ${plural(projects.length, ['работа','работы','работ'])}</span></div>
       <div class="gallery-grid">${projects.map(card).join('')}</div>`;
   }
   function aboutPage() {
@@ -167,9 +167,9 @@ const PROJECTS = [
     const mail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(PORTFOLIO.email) ? PORTFOLIO.email : '';
     const phone = /^\+?[\d\s()-]{7,20}$/.test(PORTFOLIO.phone || '') ? PORTFOLIO.phone.replace(/[^\d+]/g,'') : '';
     const links = [['Telegram',PORTFOLIO.telegram],['Behance',PORTFOLIO.behance]].filter(([,url]) => safeLink(url));
-    return `<div class="eyebrow">Остаёмся на связи</div><div class="contact-hero"><span class="big-flower" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><h1>Всё начинается<br>с простого <em>«привет».</em></h1><p>Есть идея, интересная задача или просто хочется познакомиться?<br>Буду рад хорошему разговору.</p>
-      ${phone ? `<div class="contact-email"><a href="tel:${escapeHTML(phone)}">${escapeHTML(PORTFOLIO.phoneDisplay || phone)}</a><button class="copy-button" id="copy-phone">Скопировать ↗</button></div>` : ''}
-      ${mail ? `<div class="contact-email"><a href="mailto:${escapeHTML(mail)}">${escapeHTML(mail)}</a><button class="copy-button" id="copy-email">Скопировать ↗</button></div>` : ''}
+    return `<div class="eyebrow">DIRECT CONTACT / PROD_LAYANE</div><div class="contact-hero"><span class="big-flower" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><h1>Давай сделаем<br><em>что-то своё.</em></h1><p>Проекты, коллаборации и идеи, которые не дают уснуть.<br>Пиши. Обсудим.</p>
+      ${phone ? `<div class="contact-email"><a href="tel:${escapeHTML(phone)}">${escapeHTML(PORTFOLIO.phoneDisplay || phone)}</a><button class="copy-button" id="copy-phone">Скопировать ${icon('arrow')}</button></div>` : ''}
+      ${mail ? `<div class="contact-email"><a href="mailto:${escapeHTML(mail)}">${escapeHTML(mail)}</a><button class="copy-button" id="copy-email">Скопировать ${icon('arrow')}</button></div>` : ''}
       ${links.length ? `<div class="contact-links">${links.map(([label,url]) => `<a href="${safeLink(url)}" target="_blank" rel="noopener noreferrer">${label}${icon('arrow')}</a>`).join('')}</div>` : ''}
       ${!mail && !phone && !links.length ? '<p class="contact-placeholder">Это твоё портфолио. Добавь контакты в начале script.js — они появятся здесь автоматически.</p>' : ''}</div>`;
   }
@@ -179,6 +179,7 @@ const PROJECTS = [
   function plural(n, words) { return n % 10 === 1 && n % 100 !== 11 ? words[0] : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? words[1] : words[2]; }
   function renderPage() {
     content.classList.toggle('note-page', currentPage === 'note');
+    content.dataset.page = currentPage;
     content.innerHTML = currentPage === 'home' ? homePage() : categories[currentPage] ? categoryPage(currentPage) : currentPage === 'about' ? aboutPage() : currentPage === 'contact' ? contactPage() : currentPage === 'note' ? notePage() : '<div class="empty-state"><span>♧</span><h2>Здесь ничего нет.</h2><p>Все хорошие идеи я сохранил.<br>А плохие пока просто не придумал.</p><button class="contact-button" data-open="home" style="margin:22px auto">Вернуться к хорошему ↗</button></div>';
     content.scrollTop = 0;
     content.classList.remove('content-enter');
@@ -189,7 +190,7 @@ const PROJECTS = [
     $('#go-back').disabled = navigationIndex === 0;
     $('#go-forward').disabled = navigationIndex === navigation.length - 1;
     const count = PROJECTS.filter(p => p.category === currentPage && (currentFilter === 'all' || p.folder === currentFilter)).length;
-    $('#status-label').textContent = categories[currentPage] ? `${count} ${plural(count,['объект','объекта','объектов'])} · ${currentFilter === 'all' ? 'все папки' : 'подпапка'}` : currentPage === 'home' ? '4 папки · бесконечно идей' : currentPage === 'trash' ? '0 объектов · всё важное сохранено' : '1 объект · немного личного';
+    $('#status-label').textContent = categories[currentPage] ? `${count} ${plural(count,['объект','объекта','объектов'])} · ${currentFilter === 'all' ? 'все папки' : 'подпапка'}` : currentPage === 'home' ? '4 папки · личный архив' : currentPage === 'trash' ? '0 объектов · всё важное сохранено' : '1 объект · личный архив';
     const avatar = $('.sidebar-bottom strong'); if (avatar) avatar.textContent = PORTFOLIO.name;
     document.title = `${sections[currentPage].title} — ${PORTFOLIO.name}`;
   }
@@ -304,7 +305,7 @@ const PROJECTS = [
         const input = document.createElement('textarea'); input.value = value; input.style.cssText = 'position:fixed;opacity:0'; document.body.append(input); input.select();
         const copied = document.execCommand('copy'); input.remove(); if (!copied) throw new Error('Copy unavailable');
       }
-      notify(`${label} скопирован${label === 'Почта' ? 'а' : ''}. Осталось сказать «привет» ✳︎`);
+      notify(`${label} скопирован${label === 'Почта' ? 'а' : ''}.`);
     } catch { notify('Не удалось скопировать. Контакт можно выделить и скопировать вручную.'); }
   }
 
@@ -322,6 +323,7 @@ const PROJECTS = [
   });
   $('#window-close').addEventListener('click', () => closeWindow());
   $('#login-button').addEventListener('click', unlockSession);
+  $('#login-avatar-button').addEventListener('click', unlockSession);
   $('#lock-session').addEventListener('click', lockSession);
   $('#lock-control').addEventListener('click', lockSession);
   $('#lock-wallpaper').addEventListener('click', toggleWallpaper);
@@ -360,7 +362,7 @@ const PROJECTS = [
         event.preventDefault(); unlockSession();
       }
       if (event.key === 'Tab') {
-        const first = $('#login-button'), last = $('#lock-wallpaper');
+        const first = $('#login-avatar-button'), last = $('#lock-wallpaper');
         if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
       }

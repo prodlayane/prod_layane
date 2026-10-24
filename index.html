@@ -6,15 +6,17 @@
   <meta name="theme-color" content="#050507">
   <meta name="description" content="Интерактивное портфолио в стиле рабочего стола. Дизайн, фотография и видео — в одном месте.">
   <title>prod_layane — портфолио</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=chrome-1">
-  <link rel="stylesheet" href="chrome.css?v=chrome-1">
-  <script src="script.js?v=chrome-1" defer></script>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=chrome-2">
+  <link rel="stylesheet" href="styles.css?v=chrome-2">
+  <link rel="stylesheet" href="chrome.css?v=chrome-2">
+  <link rel="stylesheet" href="system.css?v=chrome-2">
+  <script src="script.js?v=chrome-2" defer></script>
 </head>
 <body class="is-locked">
   <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
     <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M17.2 12.8c0-2 1.7-3 1.8-3.1-1-1.5-2.6-1.7-3.2-1.7-1.4-.2-2.7.8-3.4.8-.7 0-1.8-.8-2.9-.8-1.5 0-2.9.9-3.7 2.2-1.6 2.7-.4 6.8 1.2 9 .7 1 1.5 2 2.6 2 1 0 1.4-.7 2.8-.7s1.7.7 2.9.7c1.2 0 1.9-1 2.6-2 .9-1.2 1.3-2.4 1.3-2.5-.1 0-2.1-.8-2.1-3.9ZM15.1 6.6c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.6-1.1 1.8-1 2.8 1 .1 2-.5 2.7-1.2Z"/></symbol>
-    <symbol id="i-spark" viewBox="0 0 100 100"><path d="M50 9v82M9 50h82M21 21l58 58M21 79l58-58" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 100 100"><path d="M50 0C55 38 62 45 100 50 62 55 55 62 50 100 45 62 38 55 0 50 38 45 45 38 50 0Z" fill="currentColor"/></symbol>
+    <symbol id="i-enter" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
     <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
     <symbol id="i-photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></symbol>
@@ -34,16 +36,15 @@
   <div class="wallpaper" aria-hidden="true"></div>
   <section class="lock-screen" id="lock-screen" role="dialog" aria-modal="true" aria-labelledby="login-name">
     <div class="lock-vignette" aria-hidden="true"></div>
-    <div class="lock-topline"><span>PROD_LAYANE®</span><span>PERSONAL SYSTEM — VOL. 01</span></div>
+    <div class="lock-system-status" aria-hidden="true"><span>РУС</span><svg class="icon"><use href="#i-wifi"/></svg><span class="battery"><span></span></span></div>
     <div class="lock-clock"><p id="lock-date"></p><time id="lock-time"></time></div>
     <div class="login-user">
-      <div class="login-avatar" aria-hidden="true"><span>pl</span><i></i></div>
+      <button class="login-avatar" id="login-avatar-button" aria-label="Войти как prod_layane"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="28" r="12"/><path d="M16 69a24 24 0 0 1 48 0Z"/></svg></button>
       <h1 id="login-name">prod_layane</h1>
-      <p class="login-subtitle">Твоё приглашение в мою вселенную.</p>
-      <button class="login-button" id="login-button"><span id="login-button-label">Войти в сессию</span><span class="login-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span><span class="login-spinner" aria-hidden="true"></span></button>
-      <p class="login-status" id="login-status" role="status" aria-live="polite">Нажми Enter или кнопку, чтобы войти</p>
+      <button class="login-button" id="login-button" aria-label="Войти"><span class="visually-hidden" id="login-button-label">Войти</span><span class="login-arrow" aria-hidden="true"><svg class="icon"><use href="#i-enter"/></svg></span><span class="login-spinner" aria-hidden="true"></span></button>
+      <p class="login-status" id="login-status" role="status" aria-live="polite">Нажмите для входа</p>
     </div>
-    <footer class="lock-footer"><span>DESIGN · PHOTO · MOTION</span><button id="lock-wallpaper" aria-label="Сменить оттенок обоев"><svg class="icon"><use href="#i-photo"/></svg><span>Chrome / Ice</span></button><span>MAKE SOME NOISE. <i>✦</i></span></footer>
+    <footer class="lock-footer"><button id="lock-wallpaper" aria-label="Сменить оттенок обоев"><svg class="icon"><use href="#i-photo"/></svg><span>Сменить обои</span></button></footer>
   </section>
   <noscript><div class="no-script-note">Включи JavaScript в браузере, чтобы войти в портфолио.</div></noscript>
   <header class="menu-bar" inert>
@@ -55,7 +56,6 @@
       <button class="menu-item" data-open="contact">Связаться</button>
     </div>
     <div class="menu-right">
-      <span class="menu-weather"><svg class="icon"><use href="#i-sun"/></svg> 21°</span>
       <span class="battery" title="Заряд творческой энергии — 100%"><span></span></span>
       <svg class="icon wifi-icon" aria-label="Локальное портфолио"><use href="#i-wifi"/></svg>
       <button id="spotlight-button" aria-label="Поиск по портфолио"><svg class="icon"><use href="#i-search"/></svg></button>
@@ -68,7 +68,6 @@
   <div class="dropdown hidden" id="view-menu"><button id="reset-layout">Вернуть окно в центр</button><button id="toggle-wallpaper">Сменить обои <span>↔</span></button><button id="toggle-sound">Звуки интерфейса <span id="sound-status">выкл.</span></button></div>
 
   <main class="desktop" aria-label="Рабочий стол портфолио" tabindex="-1" inert>
-    <div class="desktop-heading" aria-hidden="true"><span>PERSONAL SYSTEM / VOL. 01</span><span>prod_layane</span><small>DESIGN. PHOTOGRAPHY. MOTION.</small></div>
     <nav class="desktop-folders" aria-label="Папки на рабочем столе">
       <button class="desktop-item" data-open="about"><svg class="folder-icon"><use href="#i-folder"/></svg><span>Обо мне</span></button>
       <button class="desktop-item" data-open="photos"><svg class="folder-icon"><use href="#i-folder"/></svg><span>Фото</span></button>
@@ -99,13 +98,12 @@
           <div class="sidebar-section-label second-label">Теги</div>
           <button class="tag-button" data-open="design"><i class="tag-dot purple"></i> Избранные работы</button>
           <button class="tag-button" data-open="note"><i class="tag-dot yellow"></i> Немного личного</button>
-          <div class="sidebar-bottom"><span class="avatar-mini"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><div><strong>prod_layane</strong><span>На связи, на своей волне</span></div></div>
+          <div class="sidebar-bottom"><span class="avatar-mini"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><div><strong>prod_layane</strong><span>PERSONAL ARCHIVE / 26</span></div></div>
         </aside>
         <div class="window-content" id="window-content" tabindex="-1"></div>
       </div>
-      <footer class="window-status"><span id="status-label">4 папки · бесконечно идей</span><span><i class="small-green-dot"></i> Сделано с вниманием к деталям</span></footer>
+      <footer class="window-status"><span id="status-label">4 папки · личный архив</span><span><i class="small-green-dot"></i> Личный архив / 2026</span></footer>
     </section>
-    <div class="desktop-hint"><span>NO TEMPLATE. JUST A POINT OF VIEW.</span><span>Выбери папку. Посмотри ближе. ↗</span></div>
   </main>
 
   <nav class="dock" aria-label="Приложения" inert>
