@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f2b6a0">
+  <meta name="description" content="Интерактивное портфолио в стиле рабочего стола. Дизайн, фотография и видео — в одном месте.">
+  <title>prod_layane — портфолио</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M17.2 12.8c0-2 1.7-3 1.8-3.1-1-1.5-2.6-1.7-3.2-1.7-1.4-.2-2.7.8-3.4.8-.7 0-1.8-.8-2.9-.8-1.5 0-2.9.9-3.7 2.2-1.6 2.7-.4 6.8 1.2 9 .7 1 1.5 2 2.6 2 1 0 1.4-.7 2.8-.7s1.7.7 2.9.7c1.2 0 1.9-1 2.6-2 .9-1.2 1.3-2.4 1.3-2.5-.1 0-2.1-.8-2.1-3.9ZM15.1 6.6c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.6-1.1 1.8-1 2.8 1 .1 2-.5 2.7-1.2Z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 100 100"><path d="M50 9v82M9 50h82M21 21l58 58M21 79l58-58" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+    <symbol id="i-photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m10 8 6 4-6 4Z"/></symbol>
+    <symbol id="i-design" viewBox="0 0 24 24"><path d="m12 2 10 10-10 10L2 12Z"/><path d="m2 12 10 2 10-2M12 2v12"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 6 10 8L22 6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 80 68"><defs><linearGradient id="folder-front" x2="0" y2="1"><stop stop-color="#8ad8ff"/><stop offset="1" stop-color="#39a6ef"/></linearGradient><linearGradient id="folder-back" x2="0" y2="1"><stop stop-color="#65c5f9"/><stop offset="1" stop-color="#2695dd"/></linearGradient></defs><path d="M5 14a5 5 0 0 1 5-5h20l7 7h33a5 5 0 0 1 5 5v36a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5Z" fill="url(#folder-back)"/><path d="M9 19h61v9H9Z" fill="#e4f5ff"/><path d="M4 27a5 5 0 0 1 5-5h62a5 5 0 0 1 5 5v31a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5Z" fill="url(#folder-front)"/><path d="M9 23h62" stroke="#d0efff" stroke-opacity=".75"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r=".7" fill="currentColor"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5ZM15 8a6 6 0 0 1 0 8M18 4a11 11 0 0 1 0 16"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v2m0 18v2M1 12h2m18 0h2M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></symbol>
+  </defs></svg>
+
+  <div class="wallpaper" aria-hidden="true"></div>
+  <header class="menu-bar">
+    <div class="menu-left">
+      <button class="apple-menu" aria-label="Об этом портфолио" data-open="about"><svg><use href="#i-apple"/></svg></button>
+      <button class="finder-menu" data-open="home">Finder</button>
+      <button class="menu-item" id="file-menu-button" aria-expanded="false" aria-controls="file-menu">Файл</button>
+      <button class="menu-item" id="view-menu-button" aria-expanded="false" aria-controls="view-menu">Вид</button>
+      <button class="menu-item" data-open="contact">Связаться</button>
+    </div>
+    <div class="menu-right">
+      <span class="menu-weather"><svg class="icon"><use href="#i-sun"/></svg> 21°</span>
+      <span class="battery" title="Заряд творческой энергии — 100%"><span></span></span>
+      <svg class="icon wifi-icon" aria-label="Локальное портфолио"><use href="#i-wifi"/></svg>
+      <button id="spotlight-button" aria-label="Поиск по портфолио"><svg class="icon"><use href="#i-search"/></svg></button>
+      <button id="control-button" aria-label="Настройки рабочего стола" aria-expanded="false"><span class="control-icon"><i></i><i></i></span></button>
+      <time id="clock"></time>
+    </div>
+  </header>
+
+  <div class="dropdown hidden" id="file-menu"><button data-open="home">Открыть портфолио <span>⌘ 1</span></button><button data-open="about">Обо мне <span>⌘ 2</span></button><button data-open="contact">Связаться <span>⌘ 3</span></button><div class="dropdown-divider"></div><button id="close-menu-window">Закрыть окно <span>esc</span></button></div>
+  <div class="dropdown hidden" id="view-menu"><button id="reset-layout">Вернуть окно в центр</button><button id="toggle-wallpaper">Сменить обои <span>↔</span></button><button id="toggle-sound">Звуки интерфейса <span id="sound-status">выкл.</span></button></div>
+
+  <main class="desktop" aria-label="Рабочий стол портфолио">
+    <div class="desktop-heading" aria-hidden="true"><span>MAKE SOMETHING</span><span>worth feeling.</span><small>Личное пространство для больших идей.</small></div>
+    <nav class="desktop-folders" aria-label="Папки на рабочем столе">
+      <button class="desktop-item" data-open="about"><svg class="folder-icon"><use href="#i-folder"/></svg><span>Обо мне</span></button>
+      <button class="desktop-item" data-open="photos"><svg class="folder-icon"><use href="#i-folder"/></svg><span>Фото</span></button>
+      <button class="desktop-item" data-open="videos"><svg class="folder-icon"><use href="#i-folder"/></svg><span>Видео</span></button>
+      <button class="desktop-item" data-open="design"><svg class="folder-icon"><use href="#i-folder"/></svg><span>Дизайн</span></button>
+      <button class="desktop-item note-file" data-open="note"><span class="paper-icon"><span>hello :)</span><i></i><i></i><i></i><b>✳︎</b></span><span>прочитай меня.txt</span></button>
+    </nav>
+
+    <section class="finder-window" id="finder-window" aria-label="Окно портфолио">
+      <header class="window-toolbar" id="window-drag-handle">
+        <div class="traffic-lights"><button class="traffic close" id="window-close" aria-label="Закрыть окно"><span>×</span></button><button class="traffic minimize" id="window-minimize" aria-label="Свернуть окно"><span>−</span></button><button class="traffic maximize" id="window-maximize" aria-label="Развернуть окно"><span>↗</span></button></div>
+        <div class="toolbar-navigation"><button id="go-back" aria-label="Назад" disabled><svg class="icon"><use href="#i-chevron"/></svg></button><button id="go-forward" aria-label="Вперёд" disabled><svg class="icon flip"><use href="#i-chevron"/></svg></button></div>
+        <div class="toolbar-title"><svg class="icon"><use href="#i-folder"/></svg><span id="window-title">Портфолио</span></div>
+        <div class="toolbar-actions"><span class="view-switch" title="Просмотр сеткой"><svg class="icon"><use href="#i-grid"/></svg></span><span class="toolbar-separator"></span><button id="window-search" aria-label="Поиск"><svg class="icon"><use href="#i-search"/></svg></button></div>
+      </header>
+      <div class="window-body">
+        <aside class="sidebar">
+          <div class="sidebar-section-label">Избранное</div>
+          <nav aria-label="Разделы портфолио">
+            <button class="sidebar-item active" data-open="home"><svg class="icon"><use href="#i-grid"/></svg><span>Обзор</span></button>
+            <button class="sidebar-item" data-open="about"><svg class="icon"><use href="#i-user"/></svg><span>Обо мне</span></button>
+            <button class="sidebar-item" data-open="photos"><svg class="icon"><use href="#i-photo"/></svg><span>Фото</span><span class="item-count">3</span></button>
+            <button class="sidebar-item" data-open="videos"><svg class="icon"><use href="#i-video"/></svg><span>Видео</span><span class="item-count">2</span></button>
+            <button class="sidebar-item" data-open="design"><svg class="icon"><use href="#i-design"/></svg><span>Дизайн</span><span class="item-count">3</span></button>
+          </nav>
+          <div class="sidebar-section-label second-label">Остаёмся на связи</div>
+          <button class="sidebar-item" data-open="contact"><svg class="icon"><use href="#i-mail"/></svg><span>Контакты</span></button>
+          <div class="sidebar-section-label second-label">Теги</div>
+          <button class="tag-button" data-open="design"><i class="tag-dot purple"></i> Избранные работы</button>
+          <button class="tag-button" data-open="note"><i class="tag-dot yellow"></i> Немного личного</button>
+          <div class="sidebar-bottom"><span class="avatar-mini"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><div><strong>prod_layane</strong><span>На связи, на своей волне</span></div></div>
+        </aside>
+        <div class="window-content" id="window-content" tabindex="-1"></div>
+      </div>
+      <footer class="window-status"><span id="status-label">4 папки · бесконечно идей</span><span><i class="small-green-dot"></i> Сделано с вниманием к деталям</span></footer>
+    </section>
+    <div class="desktop-hint"><span>Твой следующий любимый проект — здесь.</span><span>Открывай папки. Исследуй. Чувствуй себя как дома. ↗</span></div>
+  </main>
+
+  <nav class="dock" aria-label="Приложения">
+    <button class="dock-item is-running" data-open="home" aria-label="Finder — обзор"><span class="dock-tooltip">Finder</span><span class="app-icon finder-app"><span class="finder-split"></span><i class="finder-eye left-eye"></i><i class="finder-eye right-eye"></i><i class="finder-smile"></i></span><i class="running-dot"></i></button>
+    <button class="dock-item" data-open="about" aria-label="Обо мне"><span class="dock-tooltip">Обо мне</span><span class="app-icon about-app"><svg><use href="#i-user"/></svg></span></button>
+    <button class="dock-item" data-open="photos" aria-label="Фото"><span class="dock-tooltip">Фото</span><span class="app-icon photos-app"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span></button>
+    <button class="dock-item" data-open="videos" aria-label="Видео"><span class="dock-tooltip">Видео</span><span class="app-icon videos-app"><span class="clapper"></span><svg><use href="#i-video"/></svg></span></button>
+    <button class="dock-item" data-open="design" aria-label="Дизайн"><span class="dock-tooltip">Дизайн</span><span class="app-icon design-app"><span><svg aria-hidden="true"><use href="#i-spark"/></svg></span></span></button>
+    <span class="dock-divider"></span>
+    <button class="dock-item" data-open="contact" aria-label="Написать мне"><span class="dock-tooltip">Написать мне</span><span class="app-icon mail-app"><svg><use href="#i-mail"/></svg></span></button>
+    <button class="dock-item" data-open="note" aria-label="Заметки"><span class="dock-tooltip">Заметки</span><span class="app-icon notes-app"><b></b><i></i><i></i><i></i></span></button>
+    <span class="dock-divider"></span>
+    <button class="dock-item trash-dock" id="trash-button" aria-label="Корзина"><span class="dock-tooltip">Корзина</span><span class="trash-icon"><i></i><b></b></span></button>
+  </nav>
+
+  <section class="control-panel hidden" id="control-panel" aria-label="Параметры рабочего стола"><div class="control-panel-heading">Твой рабочий стол <span>✳︎</span></div><button id="wallpaper-control"><svg class="icon"><use href="#i-photo"/></svg><span>Обои<span>Персиковый / Лавандовый</span></span><b>↔</b></button><button id="sound-control"><svg class="icon"><use href="#i-volume"/></svg><span>Звуки интерфейса<span id="control-sound-status">Выключены</span></span><span class="switch" id="sound-switch"></span></button><div class="control-panel-footer">Маленькие настройки, большое настроение.</div></section>
+
+  <div class="overlay hidden" id="search-overlay"><section class="spotlight" role="dialog" aria-modal="true" aria-label="Поиск по портфолио"><div class="spotlight-input-row"><svg class="icon"><use href="#i-search"/></svg><input id="search-input" placeholder="Что будем искать?" autocomplete="off" aria-label="Поиск"><button id="search-close" aria-label="Закрыть поиск">esc</button></div><div id="search-results"></div><footer>Поиск по папкам и работам <span>↵ открыть</span></footer></section></div>
+  <div class="overlay hidden" id="preview-overlay"><section class="quick-look" role="dialog" aria-modal="true" aria-labelledby="preview-title"><header><div><span class="quick-look-dot"></span><span id="preview-title"></span></div><button id="preview-close" aria-label="Закрыть просмотр">×</button></header><div id="preview-content"></div></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
